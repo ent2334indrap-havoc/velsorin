@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-IN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VELSORIN Financial Planning — Clarity Today. Confidence Tomorrow.</title>
+<meta name="description" content="CFP-led financial planning in India, built around your life. Preview build.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap">
+<style>
+:root{--mid:#261329;--royal:#54214E;--orchid:#962D72;--rose:#D95184;--blush:#F4B28E;--ivory:#FFF8F4;--mauve:#BCA5B7;--char:#30232D;--serif:"Cormorant Garamond","Iowan Old Style",Georgia,serif;--sans:Inter,system-ui,sans-serif;--thermal:linear-gradient(120deg,#261329,#54214E,#962D72,#D95184,#F4B28E);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:80px;accent-color:var(--rose)}
+body{margin:0;background:var(--ivory);color:var(--char);font:400 17px/1.65 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--rose);color:#fff}
+a{color:inherit}h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0}
+:focus-visible{outline:2px solid var(--blush);outline-offset:3px;box-shadow:0 0 0 5px rgba(150,45,114,.55)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:112px 0}
+h2{font-size:clamp(2.3rem,5vw,4rem);max-width:15ch}
+.eyebrow{font-size:.8rem;letter-spacing:.18em;color:var(--blush);margin:0 0 20px}
+.dark{background:var(--mid);color:#F3E6EE}.dark p{color:var(--mauve)}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.b1{background:linear-gradient(120deg,var(--orchid),var(--rose));color:#fff;box-shadow:0 8px 28px -8px rgba(217,81,132,.7)}
+.b2{border-color:rgba(244,178,142,.6);color:var(--ivory)}.b2:hover{background:rgba(244,178,142,.14)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ivory);padding:10px 16px;z-index:99}.skip:focus{left:8px}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s,backdrop-filter .4s}
+header.s{background:rgba(38,19,41,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:var(--serif);font-size:1.7rem;letter-spacing:.32em;color:var(--ivory);text-decoration:none;display:flex;align-items:center;gap:12px}
+.logo i{width:22px;height:22px;border-radius:50% 50% 50% 4px;background:conic-gradient(from 200deg,var(--orchid),var(--rose),var(--blush),var(--orchid));display:block}
+.links{display:flex;gap:22px;align-items:center}
+.links a{color:#F3E6EE;text-decoration:none;font-size:.88rem;position:relative;padding:6px 0}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--blush);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.links a:not(.btn):hover::after,.links a:not(.btn):focus-visible::after{transform:scaleX(1)}
+.links .btn{padding:10px 18px;font-size:.85rem}
+.burger{display:none;background:none;border:1px solid rgba(244,178,142,.5);color:var(--ivory);border-radius:10px;width:46px;height:46px;cursor:pointer;font-size:1.2rem}
+@media(max-width:1060px){.burger{display:block}.links{position:fixed;inset:72px 0 auto;background:rgba(38,19,41,.97);flex-direction:column;align-items:flex-start;padding:20px 24px 28px;gap:6px;transform:translateY(-130%);transition:transform .4s;visibility:hidden}.links.o{transform:none;visibility:visible}.links a{font-size:1.05rem;padding:12px 0;width:100%}}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--mid);color:var(--ivory);padding:130px 0 90px}
+.f{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75;will-change:transform;animation:drift 26s ease-in-out infinite alternate}
+.f1{width:60vmax;height:60vmax;left:-15vmax;bottom:-25vmax;background:radial-gradient(circle,var(--orchid),transparent 68%)}
+.f2{width:46vmax;height:46vmax;right:-10vmax;top:-10vmax;background:radial-gradient(circle,var(--rose),transparent 66%);animation-duration:34s;animation-delay:-8s}
+.f3{width:34vmax;height:34vmax;right:8vmax;bottom:-12vmax;background:radial-gradient(circle,var(--blush),transparent 65%);opacity:.5;animation-duration:40s}
+.f4{width:50vmax;height:50vmax;left:20vmax;top:-20vmax;background:radial-gradient(circle,var(--royal),transparent 70%);animation-duration:30s}
+@keyframes drift{to{transform:translate3d(6vmax,-4vmax,0) scale(1.12)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(38,19,41,.35),transparent 30%,rgba(38,19,41,.85));pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+h1{font-size:clamp(3.2rem,9.4vw,8.2rem);letter-spacing:-.025em;max-width:11ch}
+h1 span{display:inline-block;opacity:0;transform:translateY(.45em);filter:blur(6px);animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none;filter:none}}
+.hero p.sub{max-width:52ch;font-size:1.2rem;color:#EBD9E4;margin:30px 0 38px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.scroll{position:absolute;z-index:2;left:50%;bottom:26px;width:1px;height:54px;background:linear-gradient(var(--blush),transparent);animation:sc 2.6s ease-in-out infinite;transform-origin:top}
+@keyframes sc{0%{transform:scaleY(0)}60%{transform:scaleY(1);opacity:1}100%{opacity:0;transform:scaleY(1)}}
+/* philosophy */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.list{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:0}
+.list li{padding:15px 0;border-top:1px solid #E7D3DB;display:flex;gap:16px}.list li::before{content:"";flex:none;width:9px;height:9px;margin-top:11px;border-radius:50%;background:var(--rose)}
+.lead{font-family:var(--serif);font-size:1.6rem;line-height:1.35;margin:26px 0 0;max-width:30ch;color:var(--royal)}
+.map{width:100%;height:auto;overflow:visible}.map text{font:500 12px var(--sans);fill:var(--char)}
+.ln{stroke:var(--orchid);stroke-width:1.2;stroke-dasharray:4 6;animation:dash 14s linear infinite;opacity:.6}@keyframes dash{to{stroke-dashoffset:-200}}
+.nd{fill:var(--ivory);stroke:var(--orchid);stroke-width:1.4;transition:fill .3s}.g:hover .nd,.g:focus .nd{fill:var(--blush)}
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.card{position:relative;background:var(--mid);color:#F3E6EE;border-radius:22px;padding:34px 30px;overflow:hidden;display:flex;flex-direction:column;gap:14px;isolation:isolate;--x:50%;--y:0%}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(320px circle at var(--x) var(--y),rgba(217,81,132,.42),transparent 70%);opacity:0;transition:opacity .4s}
+.card:hover::before,.card:focus-within::before{opacity:1}
+.card svg{width:56px;height:56px;stroke:var(--blush);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.65rem;line-height:1.15}.card p{margin:0;color:var(--mauve);font-size:.96rem}
+.card details{margin-top:auto}.card summary{cursor:pointer;color:var(--blush);font-weight:500;font-size:.92rem;list-style:none;padding:8px 0;display:inline-block}
+.card summary::-webkit-details-marker{display:none}.card details p{margin-top:10px;color:#E3CFDC}
+/* process */
+.tl{display:grid;grid-template-columns:repeat(5,1fr);margin-top:64px;position:relative}
+.tl::before,.tl::after{content:"";position:absolute;top:21px;left:10%;height:2px}
+.tl::before{width:80%;background:#E7D3DB}.tl::after{width:calc(var(--p,0)*20%);background:linear-gradient(90deg,var(--orchid),var(--rose));transition:width .7s cubic-bezier(.3,.7,.2,1)}
+.st{background:none;border:0;font:inherit;color:inherit;text-align:center;cursor:pointer;padding:0 10px;position:relative}
+.st b{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 16px;border-radius:50%;background:var(--ivory);border:2px solid #E7D3DB;font-family:var(--serif);font-size:1.15rem;font-weight:500;transition:.4s}
+.st[aria-selected=true] b,.st.d b{border-color:var(--rose);background:linear-gradient(135deg,var(--orchid),var(--rose));color:#fff}
+.st[aria-selected=true] b{box-shadow:0 0 0 8px rgba(217,81,132,.18)}
+.st span{font-family:var(--serif);font-size:1.5rem}
+.pn{margin-top:44px;background:#fff;border-radius:20px;padding:34px 38px;border:1px solid #F0DFE5;min-height:140px;max-width:760px;margin-inline:auto}
+.pn h3{font-size:2rem;margin-bottom:8px}.pn p{margin:0}
+@media(max-width:760px){.tl{grid-template-columns:1fr;gap:6px;margin-top:40px}.tl::before{width:2px;height:calc(100% - 44px);left:21px;top:22px}.tl::after{width:2px;left:21px;top:22px;height:calc(var(--p,0)*(100% - 44px)/4)}.st{display:flex;align-items:center;gap:16px;text-align:left;padding:8px 0;min-height:48px}.st b{margin:0}}
+/* experience & calc shared */
+.panel{background:rgba(255,255,255,.05);border:1px solid rgba(244,178,142,.22);border-radius:24px;padding:36px;margin-top:48px}
+.ivp{background:#fff;border:1px solid #F0DFE5}
+.ctl{display:grid;gap:18px}.ctl label{display:grid;gap:6px;font-size:.88rem}
+.ctl .row{display:flex;justify-content:space-between;gap:10px}.ctl output{font-variant-numeric:tabular-nums;color:var(--blush);font-weight:500}
+input[type=range]{width:100%;height:26px}
+.two{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.chart{width:100%;height:auto;display:block}.chart text{font:11px var(--sans);fill:var(--mauve)}
+.note{font-size:.82rem;color:var(--mauve);margin:18px 0 0}
+.bigtxt{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.1;margin:4px 0 0;font-variant-numeric:tabular-nums}
+/* calculators */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:40px 0 0}
+.tab{background:#fff;border:1px solid #E7D3DB;border-radius:999px;padding:10px 18px;font:inherit;font-size:.9rem;cursor:pointer;transition:.3s}
+.tab[aria-selected=true]{background:var(--royal);color:#fff;border-color:var(--royal)}
+.calc{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;background:#fff;border:1px solid #F0DFE5;border-radius:24px;padding:36px;margin-top:20px}
+.fld{display:grid;gap:5px;margin-bottom:16px;font-size:.88rem}
+.fld input,.fm input,.fm select,.fm textarea{font:inherit;padding:13px 14px;border:1px solid #D9C3CE;border-radius:12px;background:var(--ivory);color:var(--char);width:100%}
+.fld input[aria-invalid=true]{border-color:var(--rose)}.err{color:var(--orchid);font-size:.8rem;min-height:1em}
+.res{font-size:.9rem}.res .rw{display:flex;justify-content:space-between;border-top:1px solid #F0DFE5;padding:9px 0;font-variant-numeric:tabular-nums}
+.cl{font-size:.78rem;color:#7a6473}.cl i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin:0 6px 2px 10px;border-radius:2px}
+details.meth{margin-top:14px;font-size:.84rem;color:#6e5a68}
+/* why */
+.why{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;border-top:1px solid rgba(188,165,183,.28)}
+.why div{padding:26px 22px 8px 0}.why h3{font-size:1.55rem;margin-bottom:8px;color:var(--ivory)}.why p{margin:0;font-size:.92rem}
+.glow{position:relative;overflow:hidden}.glow::before{content:"";position:absolute;width:50vmax;height:50vmax;right:-22vmax;top:-28vmax;background:radial-gradient(circle,rgba(150,45,114,.55),transparent 66%);filter:blur(50px)}.glow .wrap{position:relative}
+/* founder */
+.por{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:radial-gradient(circle at 30% 20%,var(--blush),transparent 55%),radial-gradient(circle at 80% 90%,var(--orchid),transparent 60%),var(--royal);display:grid;place-items:end center;padding:26px;color:var(--ivory);font-size:.85rem;text-align:center;max-width:380px}
+.ph{display:inline-block;border:1px dashed var(--orchid);padding:2px 10px;border-radius:6px;color:var(--orchid);font-size:.9rem}
+/* insights */
+.art{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.art article{border-top:2px solid var(--char);padding-top:18px}.art small{color:var(--orchid);font-weight:500}
+.art h3{font-size:1.7rem;margin:8px 0 10px}.art p{margin:0;font-size:.95rem}.dr{background:#F6E4EA;color:var(--royal);padding:2px 9px;border-radius:6px;font-size:.75rem;margin-left:8px}
+/* consult */
+.consult{position:relative;overflow:hidden;color:var(--ivory);background:radial-gradient(ellipse at 15% 90%,var(--rose),transparent 55%),radial-gradient(ellipse at 90% 10%,var(--blush),transparent 45%),radial-gradient(ellipse at 55% 50%,var(--orchid),transparent 65%),var(--royal)}
+.consult .split{align-items:start}.consult h2{max-width:13ch}.consult p{color:#F6E4EA;max-width:40ch}
+.fm{background:rgba(38,19,41,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:24px;padding:32px;display:grid;gap:14px}
+.fm label{display:grid;gap:5px;font-size:.85rem}.fm .ck{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:#E3CFDC}.fm .ck input{width:20px;margin-top:3px}
+.hp{position:absolute;left:-9999px}.msg{font-size:.88rem;min-height:1.2em;color:var(--blush)}
+footer{background:var(--mid);color:var(--mauve);padding:80px 0 40px;font-size:.88rem;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;width:40vmax;height:20vmax;left:-10vmax;bottom:-14vmax;background:radial-gradient(circle,rgba(150,45,114,.4),transparent 70%);filter:blur(40px)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;position:relative}.fg a{display:block;text-decoration:none;padding:5px 0}.fg a:hover{color:var(--blush)}.fg h4{margin:0 0 10px;color:var(--ivory);font-weight:500}
+.disc{border-top:1px solid rgba(188,165,183,.25);margin-top:48px;padding-top:24px;font-size:.78rem;line-height:1.6;position:relative}
+@media(max-width:960px){section{padding:84px 0}.split,.two,.calc,.fg{grid-template-columns:1fr;gap:36px}.cards,.art{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.calc{padding:24px}}
+@media(max-width:640px){body{font-size:16px}.wrap{padding:0 20px}.cards,.art,.why{grid-template-columns:1fr}.panel,.fm{padding:22px}.cta .btn{width:100%;text-align:center}.hero p.sub{font-size:1.08rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}h1 span{opacity:1;transform:none;filter:none}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hd"><div class="wrap"><nav aria-label="Primary">
+<a class="logo" href="#top" aria-label="Velsorin home"><i></i>VELSORIN</a>
+<button class="burger" id="bg" aria-expanded="false" aria-controls="lk" aria-label="Menu">☰</button>
+<div class="links" id="lk"><a href="#top">Home</a><a href="#philosophy">Our Philosophy</a><a href="#services">Financial Planning</a><a href="#process">Services</a><a href="#calculators">Calculators</a><a href="#insights">Insights</a><a href="#about">About</a><a href="#contact">Contact</a><a class="btn b1" href="#contact">Book a Consultation</a></div>
+</nav></div></header>
+
+<main id="main">
+<div class="hero" id="top"><i class="f f1"></i><i class="f f2"></i><i class="f f3"></i><i class="f f4"></i>
+<div class="wrap"><p class="eyebrow">FINANCIAL PLANNING, REIMAGINED</p>
+<h1 aria-label="Your Future Is More Than Numbers."><span style="animation-delay:.1s">Your</span> <span style="animation-delay:.25s">Future</span> <span style="animation-delay:.4s">Is</span> <span style="animation-delay:.55s">More</span> <span style="animation-delay:.7s">Than</span> <span style="animation-delay:.85s">Numbers.</span></h1>
+<p class="sub">At Velsorin, financial planning begins with your life — your ambitions, responsibilities and the future you want to create.</p>
+<div class="cta"><a class="btn b1" href="#philosophy">Discover Our Approach</a><a class="btn b2" href="#contact">Schedule a Consultation</a></div></div>
+<span class="scroll" aria-hidden="true"></span></div>
+
+<section id="philosophy"><div class="wrap split"><div>
+<p class="eyebrow" style="color:var(--orchid)">OUR PHILOSOPHY</p>
+<h2>We Don’t Start with Products. We Start with You.</h2>
+<p class="lead">Financial planning isn’t just about how much you accumulate. It’s about what your wealth allows you to achieve.</p>
+<ul class="list"><li>Your current financial position</li><li>Your goals and commitments</li><li>Your financial risks</li><li>Your investment capacity</li><li>Your retirement needs</li><li>Your family and legacy priorities</li></ul></div>
+<svg class="map" viewBox="0 0 420 420" role="img" aria-label="Diagram: six areas of financial life connected to you at the centre"><g id="mp"></g></svg></div></section>
+
+<section class="dark" id="services"><div class="wrap"><p class="eyebrow">FINANCIAL PLANNING</p><h2>Six ways we plan around your life.</h2>
+<div class="cards" id="cd"></div></div></section>
+
+<section id="process"><div class="wrap"><p class="eyebrow" style="color:var(--orchid)">OUR PROCESS</p><h2>A Thoughtful Process. Built Around Your Life.</h2>
+<div class="tl" id="tl" role="tablist" aria-label="Planning stages"></div><div class="pn" id="pn" role="tabpanel" aria-live="polite"></div></div></section>
+
+<section class="dark glow" id="experience"><div class="wrap"><p class="eyebrow">THE PLANNING EXPERIENCE</p><h2>See how time changes what things cost.</h2>
+<div class="panel two"><div class="ctl">
+<label><span class="row">Monthly expenses today<output id="xa"></output></span><input type="range" id="xe" min="20000" max="300000" step="5000" value="75000"></label>
+<label><span class="row">Inflation per year<output id="xi"></output></span><input type="range" id="xr" min="3" max="10" step=".5" value="6"></label>
+<p class="note" style="margin:0">Illustrative only. Not based on any client data, and not a forecast.</p></div>
+<div><p class="note" style="margin:0 0 4px">The same lifestyle would cost, per month, in 30 years</p><p class="bigtxt" id="xo"></p><svg class="chart" id="xc" viewBox="0 0 600 230" role="img"></svg></div></div></div></section>
+
+<section id="calculators"><div class="wrap"><p class="eyebrow" style="color:var(--orchid)">CALCULATORS</p><h2>Run the numbers yourself.</h2>
+<div class="tabs" role="tablist" id="tb" aria-label="Calculators"></div>
+<div class="calc" id="cc"><div id="ci"></div><div class="res" aria-live="polite"><div class="note" style="margin:0;color:#7a6473" id="cn"></div><p class="bigtxt" id="cm" style="color:var(--royal)"></p><div id="cr"></div><svg class="chart" id="cs" viewBox="0 0 600 230" role="img"></svg><div class="cl" id="cg"></div><details class="meth"><summary>Method and assumptions</summary><p id="cx"></p></details></div></div>
+<p class="note" style="color:#7a6473">Educational tools. Returns are hypothetical and not guaranteed. Results are not investment advice or a recommendation.</p></div></section>
+
+<section class="dark glow"><div class="wrap"><p class="eyebrow">WHY VELSORIN</p><h2>Financial Confidence Is Built on Understanding.</h2>
+<div class="why"><div><h3>Comprehensive planning</h3><p>Every goal, asset and risk viewed together.</p></div><div><h3>Long-term perspective</h3><p>Decisions weighed against decades, not headlines.</p></div><div><h3>Personalised guidance</h3><p>A plan shaped by your family and priorities.</p></div><div><h3>Risk awareness</h3><p>Uncertainty is planned for, not ignored.</p></div><div><h3>Transparent communication</h3><p>Plain language about what we do and don’t offer.</p></div></div></div></section>
+
+<section id="about"><div class="wrap split"><div class="por"><span>Founder photograph placeholder</span></div><div>
+<p class="eyebrow" style="color:var(--orchid)">THE FOUNDER</p><h2>A planner you can speak to directly.</h2>
+<p style="margin-top:24px"><span class="ph">Founder name</span> <span class="ph">Verified qualifications</span> <span class="ph">CFP credential, once confirmed</span></p>
+<p>Experience, expertise and professional philosophy will be added here from verified information supplied by the founder. Nothing on this page is claimed until confirmed.</p></div></div></section>
+
+<section style="background:#FBEFEA" id="insights"><div class="wrap"><p class="eyebrow" style="color:var(--orchid)">INSIGHTS</p><h2>Financial education, in plain language.</h2>
+<div class="art"><article><small>Retirement</small><span class="dr">Draft</span><h3>What does a comfortable retirement actually cost?</h3><p>Placeholder article pending approval.</p></article><article><small>Wealth Psychology</small><span class="dr">Draft</span><h3>Why markets test patience more than skill</h3><p>Placeholder article pending approval.</p></article><article><small>Risk Management</small><span class="dr">Draft</span><h3>Insurance gaps most families discover too late</h3><p>Placeholder article pending approval.</p></article></div>
+<p class="note" style="color:#7a6473;margin-top:28px">Article pages and publishing arrive with the inner pages in the next phase.</p></div></section>
+
+<section class="consult" id="contact"><div class="wrap split"><div><p class="eyebrow" style="color:var(--ivory)">CONSULTATION</p><h2>Every Meaningful Future Begins with a Conversation.</h2><p style="margin-top:24px">Start with a clearer understanding of your financial life and the possibilities ahead.</p></div>
+<form class="fm" id="fm" novalidate aria-label="Consultation enquiry"><h3 style="font-size:1.9rem">Request a Consultation</h3>
+<label>Full name<input name="n" required autocomplete="name"></label><label>Email address<input name="e" type="email" required autocomplete="email"></label>
+<label>Mobile number<input name="m" type="tel" inputmode="numeric" placeholder="10-digit Indian mobile" required autocomplete="tel"></label>
+<label>Type of financial planning assistance<select name="t" required><option value="">Select one</option><option>Comprehensive financial planning</option><option>Retirement and income planning</option><option>Investment planning and portfolio review</option><option>Insurance and risk assessment</option><option>Goal-based planning</option><option>Estate and legacy coordination</option></select></label>
+<label>Preferred contact method<select name="c"><option>Phone call</option><option>Email</option><option>WhatsApp</option></select></label>
+<label>Short message<textarea name="g" rows="3" maxlength="500"></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="ck"><input type="checkbox" name="k" required> I consent to Velsorin contacting me about this enquiry and processing the details I provide, as described in the Privacy Policy. Do not share financial account details here.</label>
+<button class="btn b1" type="submit">Request a Consultation</button><p class="msg" id="fg" role="status"></p></form></div></section>
+</main>
+
+<footer><div class="wrap"><div class="fg"><div><a class="logo" href="#top" style="padding:0"><i></i>VELSORIN</a><p>Clarity Today. Confidence Tomorrow.</p></div>
+<div><h4>Explore</h4><a href="#philosophy">Our Philosophy</a><a href="#services">Financial Planning</a><a href="#calculators">Calculators</a><a href="#insights">Insights</a></div>
+<div><h4>Contact</h4><span>[Address placeholder]</span><br><span>[Phone placeholder]</span><br><span>[Email placeholder]</span></div>
+<div><h4>Legal</h4><span>Privacy Policy</span><br><span>Terms of Use</span><br><span>Disclaimer</span><br><span>Social links: to be added</span></div></div>
+<p class="disc">Velsorin is a coined brand name. Financial planning and education content is general and not personalised investment advice. This site makes no claim of SEBI registration; any registration or regulatory disclosure will be added only once independently verified. Projections are hypothetical and returns are not guaranteed. Legal pages and regulatory disclosures are pending review. © 2026 Velsorin.</p></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),R=matchMedia("(prefers-reduced-motion:reduce)").matches,
+inr=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+addEventListener("scroll",()=>$("#hd").classList.toggle("s",scrollY>30),{passive:true});
+const bg=$("#bg"),lk=$("#lk");bg.onclick=()=>{const o=lk.classList.toggle("o");bg.setAttribute("aria-expanded",o)};
+lk.onclick=e=>{if(e.target.closest("a")){lk.classList.remove("o");bg.setAttribute("aria-expanded",false)}};
+// philosophy map
+{const n=["Position","Goals","Risks","Capacity","Retirement","Legacy"];let h='';
+n.forEach((t,i)=>{const a=i/6*Math.PI*2-Math.PI/2,x=210+150*Math.cos(a),y=210+150*Math.sin(a);
+h+=`<line class="ln" x1="210" y1="210" x2="${x}" y2="${y}"/><line class="ln" x1="${x}" y1="${y}" x2="${210+150*Math.cos(a+Math.PI/3)}" y2="${210+150*Math.sin(a+Math.PI/3)}" style="opacity:.3"/>`});
+n.forEach((t,i)=>{const a=i/6*Math.PI*2-Math.PI/2,x=210+150*Math.cos(a),y=210+150*Math.sin(a);
+h+=`<g class="g" tabindex="0"><circle class="nd" cx="${x}" cy="${y}" r="30"/><text x="${x}" y="${y+4}" text-anchor="middle">${t}</text></g>`});
+h+=`<circle cx="210" cy="210" r="46" fill="url(#cg1)"/><defs><radialGradient id="cg1"><stop offset="0" stop-color="#F4B28E"/><stop offset=".6" stop-color="#D95184"/><stop offset="1" stop-color="#962D72"/></radialGradient></defs><text x="210" y="215" text-anchor="middle" style="fill:#fff;font-size:15px">You</text>`;$("#mp").innerHTML=h}
+// services
+const sv=[["Comprehensive Financial Planning","One plan that connects cash flow, investments, protection and goals.","We look at your whole financial life together, so no decision is made in isolation.",'<circle cx="28" cy="28" r="6"/><circle cx="28" cy="28" r="14"/><circle cx="28" cy="28" r="22"/>'],
+["Retirement and Income Planning","Plan the income that will fund the life you want after work.","We estimate the corpus you may need and the income it could support, under clearly stated assumptions.",'<path d="M6 40Q28 6 50 40"/><path d="M28 14v26M18 40h20"/>'],
+["Investment Planning and Portfolio Review","Review what you hold against what your goals actually need.","A structured look at asset allocation, cost and risk. Educational and planning-led.",'<path d="M10 46V30M22 46V18M34 46V26M46 46V10"/><path d="M6 48h44"/>'],
+["Insurance and Risk Assessment","Find protection gaps before life finds them for you.","Assess life, health and income protection against your family’s responsibilities.",'<path d="M28 6l18 7v14c0 11-8 18-18 22C18 45 10 38 10 27V13z"/><path d="M20 28l6 6 10-12"/>'],
+["Goal-Based Financial Planning","Give every goal a timeline, a cost and a monthly plan.","From education to a home, each goal gets its own target, horizon and funding path.",'<circle cx="28" cy="28" r="20"/><circle cx="28" cy="28" r="11"/><path d="M28 28l16-16M38 12h6v6"/>'],
+["Estate and Legacy Planning Coordination","Coordinate with legal professionals so your wishes are carried out.","We help organise your priorities and work alongside qualified legal advisers.",'<path d="M28 48V22M28 22C28 12 18 8 10 10c0 10 8 14 18 12zM28 30c0-8 8-12 16-10 0 9-7 13-16 10z"/>']];
+$("#cd").innerHTML=sv.map(s=>`<div class="card"><svg viewBox="0 0 56 56" aria-hidden="true">${s[3]}</svg><h3>${s[0]}</h3><p>${s[1]}</p><details><summary>Explore</summary><p>${s[2]} Dedicated page coming in the next phase.</p></details></div>`).join("");
+document.querySelectorAll(".card").forEach(c=>c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect();c.style.setProperty("--x",e.clientX-r.left+"px");c.style.setProperty("--y",e.clientY-r.top+"px")}));
+// process
+const ps=[["Discover","Understand the client, family, financial position and priorities."],["Analyse","Assess cash flow, assets, liabilities, protection gaps and goals."],["Design","Develop an appropriate, goal-oriented financial plan."],["Implement","Support the client through agreed implementation steps within the firm’s authorised services."],["Review","Monitor progress and revisit the plan as circumstances change."]];
+function stage(i){const t=$("#tl");t.style.setProperty("--p",i);t.querySelectorAll(".st").forEach((b,j)=>{b.setAttribute("aria-selected",j==i);b.classList.toggle("d",j<i);b.tabIndex=j==i?0:-1});$("#pn").innerHTML=`<h3>${ps[i][0]}</h3><p>${ps[i][1]}</p>`}
+$("#tl").innerHTML=ps.map((p,i)=>`<button class="st" role="tab"><b>${i+1}</b><span>${p[0]}</span></button>`).join("");
+$("#tl").querySelectorAll(".st").forEach((b,i)=>{b.onclick=()=>stage(i);b.onkeydown=e=>{const k={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];if(k){e.preventDefault();const j=(i+k+5)%5;stage(j);$("#tl").children[j].focus()}}});stage(0);
+// chart
+function chart(el,series,xl){const W=600,H=230,p=36,all=series.flatMap(s=>s.d),mx=Math.max(...all,1),n=series[0].d.length-1;
+const X=i=>p+i/Math.max(n,1)*(W-p-10),Y=v=>H-26-v/mx*(H-50);let h=`<defs><linearGradient id="ag${el.id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D95184" stop-opacity=".45"/><stop offset="1" stop-color="#D95184" stop-opacity="0"/></linearGradient></defs>`;
+for(let k=0;k<=3;k++){const y=Y(mx*k/3);h+=`<line x1="${p}" x2="${W-10}" y1="${y}" y2="${y}" stroke="#BCA5B7" stroke-opacity=".3"/><text x="${p-6}" y="${y+4}" text-anchor="end">${k?(mx*k/3>=1e7?(mx*k/3/1e7).toFixed(1)+"Cr":mx*k/3>=1e5?(mx*k/3/1e5).toFixed(1)+"L":Math.round(mx*k/3/1e3)+"k"):0}</text>`}
+series.forEach((s,j)=>{const pts=s.d.map((v,i)=>`${X(i)},${Y(v)}`).join(" ");
+if(j==0)h+=`<polygon points="${X(0)},${H-26} ${pts} ${X(n)},${H-26}" fill="url(#ag${el.id})"/>`;
+h+=`<polyline points="${pts}" fill="none" stroke="${s.c}" stroke-width="2.4" stroke-linejoin="round"${j&&s.dash?' stroke-dasharray="5 5"':''}/>`});
+h+=`<text x="${p}" y="${H-6}">0</text><text x="${W-10}" y="${H-6}" text-anchor="end">${xl} ${n}</text>`;el.innerHTML=h}
+// experience
+function xp(){const e=+$("#xe").value,r=+$("#xr").value;$("#xa").textContent=inr(e);$("#xi").textContent=r+"%";
+const d=Array.from({length:31},(_,y)=>e*(1+r/100)**y);$("#xo").textContent=inr(d[30]);chart($("#xc"),[{d,c:"#F4B28E"}],"Year");$("#xc").setAttribute("aria-label",`Monthly cost grows from ${inr(e)} to ${inr(d[30])} over 30 years at ${r}% inflation`)}
+$("#xe").oninput=$("#xr").oninput=xp;xp();
+// calculators
+const cur=(v,e)=>[v,e];
+const K={
+sip:{t:"SIP future value",f:[["Monthly investment (₹)",10000,100,1e7,100],["Expected return (% p.a., hypothetical)",12,0,30,.5],["Years",15,1,50,1]],
+c([p,r,y]){const i=r/1200,n=y*12,fv=i?p*(((1+i)**n-1)/i)*(1+i):p*n,s=[],b=[];for(let k=0;k<=y;k++){const m=k*12;s.push(i?p*(((1+i)**m-1)/i)*(1+i):p*m);b.push(p*m)}
+return{m:["Future value",fv],rows:[["Total invested",p*n],["Estimated gains",fv-p*n]],s:[{d:s,c:"#D95184",l:"Value"},{d:b,c:"#BCA5B7",l:"Invested",dash:1}],x:"Year",
+meth:"FV = P × [((1+i)ⁿ − 1) ÷ i] × (1+i), with i as monthly rate (annual ÷ 12) and n as months. Payments at the start of each month."}}},
+ret:{t:"Retirement corpus",f:[["Current monthly expenses (₹)",60000,1000,5e6,1000],["Inflation (% p.a.)",6,0,15,.5],["Years to retirement",25,1,50,1],["Years in retirement",30,1,50,1],["Post-retirement return (% p.a.)",8,0,20,.5]],
+c([e,inf,y,N,r]){const A=e*12*(1+inf/100)**y,g=(1+r/100)/(1+inf/100)-1,cp=Math.abs(g)<1e-9?A*N:A*((1-(1+g)**-N)/g)*(1+g),s=Array.from({length:y+1},(_,k)=>e*(1+inf/100)**k);
+return{m:["Corpus needed at retirement",cp],rows:[["Monthly expense at retirement",A/12],["Annual expense at retirement",A]],s:[{d:s,c:"#D95184",l:"Monthly expense over time"}],x:"Year",
+meth:"First-year expense A = E × 12 × (1+inflation)^years. Corpus = A × [1 − (1+g)^−N] ÷ g × (1+g), where g = (1+return) ÷ (1+inflation) − 1. Withdrawals at the start of each year. Ignores tax."}}},
+inf:{t:"Inflation",f:[["Amount today (₹)",100000,1,1e9,1000],["Inflation (% p.a.)",6,0,20,.5],["Years",20,1,60,1]],
+c([a,r,y]){const f=a*(1+r/100)**y,s=Array.from({length:y+1},(_,k)=>a*(1+r/100)**k);
+return{m:["Future cost of the same goods",f],rows:[["Today’s amount buys only",a/(1+r/100)**y+" "],["Cost increase",f-a]].map(x=>x),s:[{d:s,c:"#D95184",l:"Cost"}],x:"Year",pw:1,
+meth:"Future cost = Amount × (1 + inflation)^years. Purchasing power of today’s amount after n years = Amount ÷ (1 + inflation)^years."}}},
+emi:{t:"EMI",f:[["Loan amount (₹)",5000000,1000,1e9,10000],["Interest rate (% p.a.)",8.5,.1,40,.1],["Tenure (years)",20,1,40,1]],
+c([P,r,y]){const i=r/1200,n=y*12,E=P*i*(1+i)**n/((1+i)**n-1),s=[];let bal=P;s.push(bal);for(let m=1;m<=n;m++){bal=bal*(1+i)-E;if(m%12==0)s.push(Math.max(bal,0))}
+return{m:["Monthly EMI",E],rows:[["Total payment",E*n],["Total interest",E*n-P]],s:[{d:s,c:"#D95184",l:"Outstanding balance"}],x:"Year",
+meth:"EMI = P × i × (1+i)ⁿ ÷ [(1+i)ⁿ − 1], with i as the monthly rate and n as months. Excludes fees and rate changes."}}},
+goal:{t:"Goal-based investment",f:[["Goal amount (₹)",5000000,1000,1e10,10000],["Years to goal",10,1,50,1],["Expected return (% p.a., hypothetical)",11,0,30,.5],["Existing savings for this goal (₹)",100000,0,1e10,1000]],
+c([T,y,r,S]){const i=r/1200,n=y*12,gap=Math.max(T-S*(1+i)**n,0),p=i?gap*i/((((1+i)**n)-1)*(1+i)):gap/n,s=[];for(let k=0;k<=y;k++){const m=k*12;s.push(S*(1+i)**m+(i?p*(((1+i)**m-1)/i)*(1+i):p*m))}
+return{m:["Monthly investment needed",p],rows:[["Total you invest",p*n],["Existing savings grown",S*(1+i)**n]],s:[{d:s,c:"#D95184",l:"Projected value"},{d:s.map(()=>T),c:"#BCA5B7",l:"Goal",dash:1}],x:"Year",
+meth:"Required SIP = (Goal − Savings × (1+i)ⁿ) × i ÷ [((1+i)ⁿ − 1) × (1+i)]. Monthly rate i, n months. Ignores tax and inflation of the goal cost."}}}};
+let ck="sip";const vals={};
+function tabs(){$("#tb").innerHTML=Object.entries(K).map(([k,v])=>`<button class="tab" role="tab" data-k="${k}" aria-selected="${k==ck}">${v.t}</button>`).join("");
+$("#tb").querySelectorAll(".tab").forEach(b=>b.onclick=()=>{ck=b.dataset.k;tabs();form()})}
+function form(){const c=K[ck];$("#ci").innerHTML=c.f.map((f,i)=>`<div class="fld"><label for="f${i}">${f[0]}</label><input id="f${i}" type="number" inputmode="decimal" min="${f[2]}" max="${f[3]}" step="${f[4]}" value="${(vals[ck+i]??f[1])}"><span class="err" id="e${i}"></span></div>`).join("");
+$("#ci").querySelectorAll("input").forEach(i=>i.oninput=calc);calc()}
+let shown=0;
+function calc(){const c=K[ck],v=[];let ok=true;c.f.forEach((f,i)=>{const el=$("#f"+i),x=parseFloat(el.value),bad=isNaN(x)||x<f[2]||x>f[3];el.setAttribute("aria-invalid",bad);$("#e"+i).textContent=bad?`Enter a value from ${f[2].toLocaleString("en-IN")} to ${f[3].toLocaleString("en-IN")}.`:"";if(bad)ok=false;else vals[ck+i]=x;v.push(x)});
+if(!ok)return;const o=c.c(v);$("#cn").textContent=o.m[0];const to=o.m[1],from=ck==shown?+($("#cm").dataset.v||0):0;shown=ck;$("#cm").dataset.v=to;
+if(R)$("#cm").textContent=inr(to);else{const t0=performance.now();(function s(t){const k=Math.min((t-t0)/450,1);$("#cm").textContent=inr(from+(to-from)*(1-(1-k)**3));if(k<1)requestAnimationFrame(s)})(t0)}
+$("#cr").innerHTML=o.rows.map(r=>`<div class="rw"><span>${r[0]}</span><b>${typeof r[1]=="string"?inr(parseFloat(r[1])):inr(r[1])}</b></div>`).join("");
+chart($("#cs"),o.s,o.x);$("#cs").setAttribute("aria-label",`${c.t} chart. ${o.m[0]}: ${inr(to)}`);
+$("#cg").innerHTML=o.s.map(s=>`<i style="background:${s.c}"></i>${s.l}`).join("");$("#cx").textContent=o.meth}
+tabs();form();
+// form
+$("#fm").onsubmit=e=>{e.preventDefault();const f=e.target,m=$("#fg"),d=Object.fromEntries(new FormData(f));
+if(d.website){return}
+if(d.n.trim().length<2)return m.textContent="Enter your full name.";
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.e))return m.textContent="Enter a valid email address.";
+if(!/^(\+?91[\s-]?)?[6-9]\d{9}$/.test(d.m.replace(/\s/g,"")))return m.textContent="Enter a valid 10-digit Indian mobile number.";
+if(!d.t)return m.textContent="Select the type of assistance you need.";
+if(!d.k)return m.textContent="Please accept the privacy consent to continue.";
+m.textContent="Preview mode: validation passed, but no backend is connected yet, so nothing was sent."};
+</script></body></html>
